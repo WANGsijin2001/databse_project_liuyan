@@ -19,7 +19,7 @@ public class DB {
     public DB() {
         url = "jdbc:mysql://localhost:3306/liuyan?characterEncoding=UTF-8" + "&serverTimezone=UTC";//“characterEncoding=UTF-8”的目的是防止数据库中的记录中有汉字，设置成gb2312也可以
         user = "root";
-        password = "oracle";
+        password = "123456";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             ct = DriverManager.getConnection(url, user, password);

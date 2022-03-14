@@ -1,3 +1,5 @@
+package servlet;
+
 import java.io.IOException;
 
 import db.DB;

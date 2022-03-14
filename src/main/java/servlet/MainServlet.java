@@ -1,3 +1,4 @@
+package servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -11,9 +12,9 @@ import model.User;
 import db.DB;
 
 /**
- * Servlet implementation class MainServlet
+ * Servlet implementation class servlet.MainServlet
  */
-//@WebServlet("/MainServlet")
+//@WebServlet("/servlet.MainServlet")
 public class MainServlet extends HttpServlet {
 
     /**

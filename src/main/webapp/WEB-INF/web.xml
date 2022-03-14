@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>mainServlet</servlet-name>
-    <servlet-class>MainServlet</servlet-class>
+    <servlet-class>servlet.MainServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>mainServlet</servlet-name>
@@ -15,7 +15,7 @@
 
   <servlet>
     <servlet-name>addServlet</servlet-name>
-    <servlet-class>AddServlet</servlet-class>
+    <servlet-class>servlet.AddServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>addServlet</servlet-name>
@@ -23,7 +23,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>registerServlet</servlet-name>
-    <servlet-class>RegisterServlet</servlet-class>
+    <servlet-class>servlet.RegisterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>registerServlet</servlet-name>
@@ -31,10 +31,10 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>passwordServlet</servlet-name>
-    <servlet-class>PasswordServlet</servlet-class>
+    <servlet-class>servlet.PasswordServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>passwordServlet</servlet-name>
-    <url-pattern>/PasswordServlet</url-pattern>
+    <url-pattern>/servlet.PasswordServlet</url-pattern>
   </servlet-mapping>
 </web-app>
