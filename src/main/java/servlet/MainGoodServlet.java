@@ -15,7 +15,7 @@ import db.DB;
  * Servlet implementation class servlet.MainServlet
  */
 //@WebServlet("/servlet.MainServlet")
-public class MainServlet extends HttpServlet {
+public class MainGoodServlet extends HttpServlet {
 
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -33,12 +33,10 @@ public class MainServlet extends HttpServlet {
         }
         session.setAttribute("user", user);
         if(user!=null){
-            ArrayList al=db.findLyInfo();
             ArrayList al2 = db.findgoods();
-            session.setAttribute("al", al);
             session.setAttribute("al2", al2);
             //System.out.println("登陆成功！");
-            response.sendRedirect("main.jsp");
+            response.sendRedirect("Goods.jsp");
         }
         else{
             //System.out.println("登陆失败！");

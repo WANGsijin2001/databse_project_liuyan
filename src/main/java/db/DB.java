@@ -141,5 +141,41 @@ public class DB {
             return false;
         }
     }
-
+    public boolean addGoods(Goods Gds){// 资料管理
+        try{
+            pstmt = ct.prepareStatement("insert into goods (id, goodname, value, date_of_manufacture, quality_guarantee_period, supplier) values(?,?,?,?,?,?)");
+            pstmt.setInt(1, Gds.getId());
+            pstmt.setString(2, Gds.getGoodname());
+            pstmt.setDouble(3, Gds.getValue());
+            pstmt.setString(4, Gds.getDate_of_manufacture());
+            pstmt.setString(5, Gds.getQuality_guarantee_period());
+            pstmt.setString(6, Gds.getSupplier());
+            pstmt.executeUpdate();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public ArrayList findgoods(){
+        try{
+            pstmt = ct.prepareStatement("select * from goods");
+            ArrayList al = new ArrayList();
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Goods Gds = new Goods();
+                Gds.setId(rs.getInt(1));
+                Gds.setGoodname(rs.getString(2));
+                Gds.setValue(rs.getDouble(3));
+                Gds.setDate_of_manufacture(rs.getString(4));
+                Gds.setQuality_guarantee_period(rs.getString(5));
+                Gds.setSupplier(rs.getString(6));
+                al.add(Gds);
+            }
+            return al;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
