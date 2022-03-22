@@ -38,7 +38,7 @@ public class MainServlet extends HttpServlet {
             session.setAttribute("al", al);
             session.setAttribute("al2", al2);
             //System.out.println("登陆成功！");
-            response.sendRedirect("main.jsp");
+            response.sendRedirect("index.jsp");
         }
         else{
             //System.out.println("登陆失败！");

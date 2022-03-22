@@ -10,7 +10,6 @@
 <head>
     <title>Title</title>
 </head>
-<body>
 <body bgcolor="#E3E3E3">
 <div style="text-align: center;">
     <form action="GoodServlet" method="post">
