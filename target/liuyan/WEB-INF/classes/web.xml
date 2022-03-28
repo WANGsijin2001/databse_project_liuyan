@@ -56,4 +56,31 @@
     <servlet-name>MainGoodServlet</servlet-name>
     <url-pattern>/MainGoodServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PurchaseServlet</servlet-name>
+    <servlet-class>servlet.PurchaseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PurchaseServlet</servlet-name>
+    <url-pattern>/PurchaseServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>StockServlet</servlet-name>
+    <servlet-class>servlet.StockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockServlet</servlet-name>
+    <url-pattern>/StockServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReturnServlet</servlet-name>
+    <servlet-class>servlet.ReturnServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReturnServlet</servlet-name>
+    <url-pattern>/ReturnServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -35,8 +35,14 @@ public class MainServlet extends HttpServlet {
         if(user!=null){
             ArrayList al=db.findLyInfo();
             ArrayList al2 = db.findgoods();
+            ArrayList al3 = db.findpurchase();
+            ArrayList al4 = db.findstock();
+            ArrayList al5 = db.find_return();
             session.setAttribute("al", al);
             session.setAttribute("al2", al2);
+            session.setAttribute("al3", al3);// 采购订单
+            session.setAttribute("al4", al4);// 进货单
+            session.setAttribute("al5", al5);// 退货信息
             //System.out.println("登陆成功！");
             response.sendRedirect("index.jsp");
         }

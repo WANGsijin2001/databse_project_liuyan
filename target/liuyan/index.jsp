@@ -12,11 +12,14 @@
 <h2>请选择你要进入的页面</h2>
 <a href="main.jsp">留言板系统主页</a>
 <a href="Goods.jsp">资料管理主页</a>
+<a href="Purchase.jsp">采购订单信息页面</a>
+<a href="stock.jsp">进货信息</a>
+<a href="return_goods.jsp">退货信息</a>
 <%}else{%>
 请先<a href="login.jsp">登录</a>
 <%}%>
 <%--必须要置null不然一直都是那一个用户名, 具体原理未知--%>
-<%session.setAttribute("user", null);%>
+<%--<%session.setAttribute("user", null);%>--%>
 
 </body>
 </html>

@@ -178,4 +178,115 @@ public class DB {
             return null;
         }
     }
+    public boolean addpurchase(Purchase purchase){
+        try{
+            pstmt = ct.prepareStatement("insert into purchase_order (id, name, tim, supplier, undertaker, cost) values(?,?,?,?,?,?)");
+            pstmt.setInt(1, purchase.getId());
+            pstmt.setString(2, purchase.getName());
+            pstmt.setString(3, purchase.getTim());
+            pstmt.setString(4, purchase.getSupply());
+            pstmt.setString(5, purchase.getPerson());
+            pstmt.setDouble(6, purchase.getValue());
+            pstmt.executeUpdate();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public ArrayList findpurchase(){
+        try{
+            pstmt = ct.prepareStatement("select * from purchase_order");
+            ArrayList al = new ArrayList();
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Purchase purchase = new Purchase();
+                purchase.setId(rs.getInt(1));
+                purchase.setName(rs.getString(2));
+                purchase.setTim(rs.getString(3));
+                purchase.setSupply(rs.getString(4));
+                purchase.setPerson(rs.getString(5));
+                purchase.setValue(rs.getDouble(6));
+                al.add(purchase);
+            }
+            return al;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public boolean addstock(Purchase purchase){
+        try{
+            pstmt = ct.prepareStatement("insert into stock (id, name, tim, supplier, undertaker, cost) values(?,?,?,?,?,?)");
+            pstmt.setInt(1, purchase.getId());
+            pstmt.setString(2, purchase.getName());
+            pstmt.setString(3, purchase.getTim());
+            pstmt.setString(4, purchase.getSupply());
+            pstmt.setString(5, purchase.getPerson());
+            pstmt.setDouble(6, purchase.getValue());
+            pstmt.executeUpdate();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public ArrayList findstock(){
+        try{
+            pstmt = ct.prepareStatement("select * from stock");
+            ArrayList al = new ArrayList();
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Purchase purchase = new Purchase();
+                purchase.setId(rs.getInt(1));
+                purchase.setName(rs.getString(2));
+                purchase.setTim(rs.getString(3));
+                purchase.setSupply(rs.getString(4));
+                purchase.setPerson(rs.getString(5));
+                purchase.setValue(rs.getDouble(6));
+                al.add(purchase);
+            }
+            return al;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public boolean add_return(Purchase purchase){
+        try{
+            pstmt = ct.prepareStatement("insert into return_goods (id, name, tim, supplier, undertaker, cost) values(?,?,?,?,?,?)");
+            pstmt.setInt(1, purchase.getId());
+            pstmt.setString(2, purchase.getName());
+            pstmt.setString(3, purchase.getTim());
+            pstmt.setString(4, purchase.getSupply());
+            pstmt.setString(5, purchase.getPerson());
+            pstmt.setDouble(6, purchase.getValue());
+            pstmt.executeUpdate();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public ArrayList find_return(){
+        try{
+            pstmt = ct.prepareStatement("select * from return_goods");
+            ArrayList al = new ArrayList();
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Purchase purchase = new Purchase();
+                purchase.setId(rs.getInt(1));
+                purchase.setName(rs.getString(2));
+                purchase.setTim(rs.getString(3));
+                purchase.setSupply(rs.getString(4));
+                purchase.setPerson(rs.getString(5));
+                purchase.setValue(rs.getDouble(6));
+                al.add(purchase);
+            }
+            return al;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
