@@ -34,7 +34,7 @@ public class ReturnServlet extends HttpServlet {
 
         User user = (User)request.getSession().getAttribute("user");
         Purchase purchase = new Purchase();
-        purchase.setId(user.getId());
+        purchase.setId(id);
         purchase.setName(name);
         purchase.setTim(tim);
         purchase.setSupply(supplier);
